@@ -29,6 +29,10 @@ module.exports = class ChatManager {
 
         if (users.length > 0) {
           io.emit('user-disconnect', users[0].username);
+          const data = { message: `${users[0].username} has left!`, username: 'notification' };
+          data.timestamp = moment().valueOf();
+          this.messages.push(data);
+          io.emit('message', JSON.stringify(data));
           this.deleteUser(users[0]);
         }
       });
@@ -48,6 +52,10 @@ module.exports = class ChatManager {
           socket: socket,
         });
         io.emit('user-join', name);
+        const data = { message: `${name} has joined!`, username: 'notification' };
+        data.timestamp = moment().valueOf();
+        this.messages.push(data);
+        io.emit('message', JSON.stringify(data));
       });
 
       socket.on('message', response => {

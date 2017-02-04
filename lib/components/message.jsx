@@ -12,10 +12,16 @@ class Message extends React.PureComponent {
     }
 
     render() {
-        const { template, username, message, timestamp } = this.props;
+        const {
+            template,
+            username,
+            message,
+            timestamp,
+        } = this.props;
 
         return (
             <li
+                className={username}
                 dangerouslySetInnerHTML={{
                     __html: template({
                         username,
