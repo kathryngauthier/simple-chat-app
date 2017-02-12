@@ -1,4 +1,4 @@
-*,*:before,*:after,ul,li,a,button,input,h1,h2,h3,h4,h5,h6,p, img, image, svg {
+t,h1,h2,h3,h4,h5,h6,p, img, image, svg {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -16,10 +16,24 @@ html, body {
 	font-family: 'Roboto';
 }
 
-h1{
+h1 {
   text-transform: uppercase;
   color: #0080FF;
   padding-top: 50px;
+}
+
+.notif {
+  background-color: #0080FF;
+  margin: 10px;
+  padding: 10px;
+  color: white;
+  font-weight: 300;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+b {
+  font-weight: 400;
 }
 
 button {
