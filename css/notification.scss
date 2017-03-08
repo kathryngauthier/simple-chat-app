@@ -1,0 +1,43 @@
+//lower right corner
+
+.notification-container {
+  position: fixed;
+
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  width: 10vw;
+
+  min-width: 250px;
+}
+
+.notification-container .notifications {
+//ul
+list-style: none;
+padding: 0;
+margin: 0;
+
+display: flex;
+flex-direction: column-reverse;
+align-items: center;
+justify-content: flex-end;
+
+}
+.notifications li {
+margin: 2.5px;
+padding: 10 px 25px;
+
+}
+
+.notifications li .notification.connect{
+background: rgb(62, 245, 152);
+}
+.notifications li .notification.disconnect{
+background: rgba(230, 15, 169, 0.6);
+}
+.notifications li .notification.info{
+background: rgb(100, 33, 242);
+
+}
+Chat Conversation End
+Type a message...
